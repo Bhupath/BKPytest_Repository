@@ -1,0 +1,34 @@
+While importing the modules in python files.
+  1. Import Third part modules
+  2. Import Automation Custome Library modules.
+  3. Import CommonUtils modules
+
+Update the modules name along with version if any new third part modules applied in Automation Library at requirements.txt file.
+
+Use QABiot.py console application for all execution.
+
+* Pytest Execution Approaches.
+=> pytest -v -s sanity
+=> pytest -v -s <TestCaseFile>
+=> pytest -v -s -k <string contain cases>
+
+-k => Execute the string contain cases alone.
+-m => Execute the marker cases alone.
+-v => Verbose mode.
+-s => To get the console output if stream try to print on the console.
+
+* Code Quality Guide Lines.
+1. Use pyline to validate teh codes it should be >=8
+2. Peer review of python code, maintain the good quality with documentation as well.
+3. Test Case Review to be done with Test Case Assignee and SME.
+4. Module reference object should be in Capital Letter.
+5. Method names should be in one word or snake case or pascal case.
+6. Class names should be in camel cases (Upper Letter).
+7. Varible or Literals can be Upper case or snake case.
+8. Pytest test cases shoudl be start with test_ prefix.
+9. In a method shouldn't allow more than 5 arguments in python if required suggested to use *args & **kwargs.
+10. Don't use the time default fucntion in python recommende to use @retry decorator propert with tenacity module.
+11. Don't use the python keywords as variables, method, class names.
+12. No more logics shouldn't be write in Test Case function.
+13. CommonUtils is an bussiness logics.
+14. If decide to use fixture can be imported or maintain
