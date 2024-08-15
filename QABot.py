@@ -50,13 +50,21 @@ class QABot:
     param command: str
     """
     print("="*10+"Welcome to BK Automaton Framework "+"="*10)
-    print("****")
-    print("*   *")
-    print("*     *")
-    print("*     *")
-    print("*   *")
-    print("*")
-    print("*")
+    print("BBBB")
+    print("B    BB")
+    print("B    BB")
+    print("B      B")
+    print("B      B")
+    print("B    BB")
+    print("B   BB")
+    print("BBBB")
+    print("B    BB")
+    print("B    BB")
+    print("B      B")
+    print("B      B")
+    print("B    BB")
+    print("B   BB")
+    print("BBBB")
     if method == "install modules":
       cls.install_python_modules()
     elif method == "enable venv":
