@@ -1,7 +1,7 @@
 #/usr/bin/python
 
 # General util specific to common purpose
-
+import yaml
 class YAML:
   @staicmethod
   def yaml_to_dict(filepath: str) -> dict:
