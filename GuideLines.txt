@@ -31,4 +31,7 @@ Use QABiot.py console application for all execution.
 11. Don't use the python keywords as variables, method, class names.
 12. No more logics shouldn't be write in Test Case function.
 13. CommonUtils is an bussiness logics.
-14. If decide to use fixture can be imported or maintain
+14. If decide to use fixture can be imported or maintain conftest.py in each direction path.
+    While executing the test case it would refer to current folder and then move to parent folders.
+15. Library is like an core modules for Automation repo like python build-in modules.
+
