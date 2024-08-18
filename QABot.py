@@ -20,7 +20,7 @@ else:
 
 class QABot:
 
-  MTCIL_ENV = "mtcil_env"
+  _ENV = "_env"
 
   @classmethod
   def install_python_modules(cls):
@@ -37,8 +37,8 @@ class QABot:
     try:
       print("Setting up the vent for python project")
       output = subprocess.getoutput("which python3")
-      os.system(f"{output} -m venv {cls.MTCIL_ENV}")
-      print(f"Please Execute: source {cls.MTCIL_ENV}/bin/activate\n Then Proceed to install python modules")
+      os.system(f"{output} -m venv {cls._ENV}")
+      print(f"Please Execute: source {cls._ENV}/bin/activate\n Then Proceed to install python modules")
     except Exception as err:
       print(f"Exception was occured with: {err}")
 
