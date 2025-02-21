@@ -1,0 +1,138 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" version="26.0.15">
+  <diagram name="Page-1" id="WsKqKVlw4rPjQ0e5b_gu">
+    <mxGraphModel dx="794" dy="458" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-3" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.user;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-5" value="&lt;font face=&quot;Times New Roman&quot;&gt;User&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="240" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-6" value="&lt;h3&gt;&lt;font style=&quot;line-height: 150%;&quot; face=&quot;Times New Roman&quot;&gt;Jenkins Pipeline&lt;/font&gt;&lt;/h3&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="205" width="480" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-7" value="&lt;h3&gt;&lt;font face=&quot;Times New Roman&quot;&gt;Repository&lt;/font&gt;&lt;/h3&gt;" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iTextInput;strokeColor=#444444;buttonText=;fontSize=8;whiteSpace=wrap;align=left;spacingLeft=6;" vertex="1" parent="1">
+          <mxGeometry x="170" y="270" width="60" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-8" value="&lt;h3&gt;&lt;font face=&quot;Times New Roman&quot;&gt;AWS ECR&lt;/font&gt;&lt;/h3&gt;" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iTextInput;strokeColor=#444444;buttonText=;fontSize=8;whiteSpace=wrap;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="230" y="130" width="60" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-9" value="&lt;h3&gt;&lt;font face=&quot;Times New Roman&quot;&gt;MTCIL (NonLi) AUT&lt;/font&gt;&lt;/h3&gt;" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iTextInput;strokeColor=#444444;buttonText=;fontSize=8;whiteSpace=wrap;align=left;" vertex="1" parent="1">
+          <mxGeometry x="290" y="270" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-10" value="&lt;h3&gt;&lt;font face=&quot;Times New Roman&quot;&gt;MTCIL (Li) AUT&lt;/font&gt;&lt;/h3&gt;" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iTextInput;strokeColor=#444444;buttonText=;fontSize=8;whiteSpace=wrap;align=left;spacingLeft=3;" vertex="1" parent="1">
+          <mxGeometry x="380" y="130" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-11" value="&lt;h3&gt;&lt;font face=&quot;Times New Roman&quot;&gt;GitOps (ArgoCD)&lt;/font&gt;&lt;/h3&gt;" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iTextInput;strokeColor=#444444;buttonText=;fontSize=8;whiteSpace=wrap;align=left;spacingLeft=2;" vertex="1" parent="1">
+          <mxGeometry x="460" y="270" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-17" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;entryX=0.311;entryY=1.013;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.207;exitY=0.033;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="QqHwurd3XqfQzH0oPlSl-6" target="QqHwurd3XqfQzH0oPlSl-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="200" as="sourcePoint" />
+            <mxPoint x="267" y="154" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-18" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;entryX=0.311;entryY=1.013;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.097;exitY=0.944;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="QqHwurd3XqfQzH0oPlSl-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="211" y="315" as="sourcePoint" />
+            <mxPoint x="190" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-19" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;entryX=0.311;entryY=1.013;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.097;exitY=0.944;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="348.5" y="233" as="sourcePoint" />
+            <mxPoint x="321.5" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-20" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;entryX=0.311;entryY=1.013;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.207;exitY=0.033;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="435" y="205" as="sourcePoint" />
+            <mxPoint x="415" y="154" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-21" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;entryX=0.311;entryY=1.013;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.097;exitY=0.944;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="517" y="233" as="sourcePoint" />
+            <mxPoint x="490" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-22" value="&lt;h3&gt;&lt;font face=&quot;Times New Roman&quot;&gt;Allure Report&lt;/font&gt;&lt;/h3&gt;" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iTextInput;strokeColor=#444444;buttonText=;fontSize=8;whiteSpace=wrap;align=left;" vertex="1" parent="1">
+          <mxGeometry x="540" y="180" width="60" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-23" value="&lt;h3&gt;&lt;font face=&quot;Times New Roman&quot;&gt;ArgoCD Dashboard&lt;/font&gt;&lt;/h3&gt;" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iTextInput;strokeColor=#444444;buttonText=;fontSize=8;whiteSpace=wrap;align=left;spacingLeft=4;" vertex="1" parent="1">
+          <mxGeometry x="540" y="235" width="60" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QqHwurd3XqfQzH0oPlSl-24">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="192.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QqHwurd3XqfQzH0oPlSl-24" target="QqHwurd3XqfQzH0oPlSl-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-24" value="&lt;h1&gt;&lt;font&gt;Prometheus&lt;/font&gt;&lt;/h1&gt;" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iTextInput;strokeColor=#444444;buttonText=;fontSize=8;whiteSpace=wrap;align=left;fontFamily=Times New Roman;spacingLeft=3;" vertex="1" parent="1">
+          <mxGeometry x="690" y="175" width="90" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QqHwurd3XqfQzH0oPlSl-25" target="QqHwurd3XqfQzH0oPlSl-24">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="735" y="210" />
+              <mxPoint x="735" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-25" value="&lt;h1&gt;&lt;font&gt;Grafana&lt;/font&gt;&lt;/h1&gt;" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iTextInput;strokeColor=#444444;buttonText=;fontSize=8;whiteSpace=wrap;align=left;fontFamily=Times New Roman;spacingTop=0;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="690" y="265" width="90" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-26" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="140" as="sourcePoint" />
+            <mxPoint x="670" y="190" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="670" y="140" />
+              <mxPoint x="670" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-27" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0.644;exitY=1.147;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="QqHwurd3XqfQzH0oPlSl-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="150" as="sourcePoint" />
+            <mxPoint x="680" y="200" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="348" y="330" />
+              <mxPoint x="680" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-33" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="220" as="sourcePoint" />
+            <mxPoint x="170" y="219.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-34" value="Label" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="QqHwurd3XqfQzH0oPlSl-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-35" value="Source" style="edgeLabel;resizable=0;html=1;;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="QqHwurd3XqfQzH0oPlSl-33">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-36" value="Input" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="QqHwurd3XqfQzH0oPlSl-33">
+          <mxGeometry x="0.0594" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-37" value="&lt;h3&gt;&lt;font face=&quot;Times New Roman&quot;&gt;MTCIL PackagePathInfo&lt;/font&gt;&lt;/h3&gt;" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iTextInput;strokeColor=#444444;buttonText=;fontSize=8;whiteSpace=wrap;align=left;spacingLeft=6;" vertex="1" parent="1">
+          <mxGeometry x="80" y="150" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-38" value="&lt;h3&gt;&lt;font face=&quot;Times New Roman&quot;&gt;GitOps PackagePathInfo&lt;/font&gt;&lt;/h3&gt;" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iTextInput;strokeColor=#444444;buttonText=;fontSize=8;whiteSpace=wrap;align=left;spacingLeft=6;" vertex="1" parent="1">
+          <mxGeometry x="80" y="105" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="QqHwurd3XqfQzH0oPlSl-39" value="&lt;h3&gt;&lt;font face=&quot;Times New Roman&quot;&gt;Version/BuildVersion/ChartVersion&lt;/font&gt;&lt;/h3&gt;" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iTextInput;strokeColor=#444444;buttonText=;fontSize=8;align=center;spacingLeft=6;whiteSpace=wrap;textShadow=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="170" height="25" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
