@@ -1,0 +1,132 @@
+#!/usr/bin/python
+import time
+import paramiko
+from util.log import createLogger
+
+logger = createLogger()
+class SSHTailer(object):
+    """
+    Class to handle the tailing of a single file via SSH.
+    """
+    def __init__(self, host, remote_filename, private_key=None, verbose=True):
+        if '@' in host:
+            self.username, self.host = tuple(host.split('@'))
+        else:
+            self.username, self.host = None, host
+        if 'log' in remote_filename:
+            self.remote_filename = "/data/logs/" + remote_filename
+        else:
+            self.remote_filename = remote_filename
+        self.private_key = private_key
+        self.client = None
+        self.sftp_client = None
+        self.remote_file_size = None
+        self.line_terminators = ['\r', '\n', '\r\n']
+        self.line_terminators_joined = '\r\n'
+        self.username = "ec2-user"
+        #self.password = "mavenir"
+        self.verbose = verbose
+
+    def connect(self):
+        if self.verbose:
+            logger.info("Connecting to %s..." % self.host)
+        # connect to the host
+        key = paramiko.RSAKey.from_private_key_file(self.private_key)
+        self.client = paramiko.SSHClient()
+        #self.client.load_system_host_keys()
+        self.client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+        if self.private_key:
+            self.client.connect(self.host, username=self.username, pkey=key)
+        else:
+            self.client.connect(self.host, username=self.username)
+        '''
+        self.client.connect(hostname=self.host, username=self.username, password=self.password, timeout=20)
+        '''
+        if self.verbose:
+            logger.info("Opening remote file %s..." % self.remote_filename)
+        # open a connection to the remote file via SFTP
+        self.sftp_client = self.client.open_sftp()
+
+    def tail(self):
+        # make sure there's a connection
+        if not self.sftp_client:
+            self.connect()
+
+        fstat = self.sftp_client.stat(self.remote_filename)
+        # check if we have the file size
+        if self.remote_file_size is not None:
+            # if the file's grown
+            if self.remote_file_size < fstat.st_size:
+                for line in self.get_new_lines():
+                    yield line
+
+        self.remote_file_size = fstat.st_size
+
+    def get_new_lines(self):
+        """
+        Opens the file and reads any new data from it.
+        """
+        remote_file = self.sftp_client.open(self.remote_filename, 'r')
+        # seek to the latest read point in the file
+        remote_file.seek(self.remote_file_size, 0)
+        # read any new lines from the file
+        line = remote_file.readline()
+        print (line)
+        while line:
+            yield line.strip(self.line_terminators_joined)
+            line = remote_file.readline()
+        remote_file.close()
+
+    def get_all_contents(self):
+        """
+         Opens the file and reads all data from it.
+         """
+        if not self.sftp_client:
+            self.connect()
+
+        remote_file = self.sftp_client.open(self.remote_filename, 'r')
+        line = remote_file.readline()
+        print(line)
+
+    def read_contents_from_file(self):
+        if not self.sftp_client:
+            self.connect()
+        remote_file = self.sftp_client.open(self.remote_filename, 'r')
+        lines = remote_file.readlines()
+        #logger.info(type(lines))
+        #print (f'am printing: {lines}')
+        return lines
+    def remove_all_contents(self):
+        if not self.sftp_client:
+            self.connect()
+        remote_file = self.sftp_client.open(self.remote_filename, 'w')
+        remote_file.close()
+
+    def disconnect(self):
+        if self.sftp_client:
+            if self.verbose:
+                logger.info ("Closing SFTP connection...")
+            self.sftp_client.close()
+            self.sftp_client = None
+        if self.client:
+            if self.verbose:
+                logger.info ("Closing SSH connection...")
+            self.client.close()
+            self.client = None
+    def download_remote_file(self,remote_file_path:str,local_file_path:str):
+        """Help to download the remote file"""
+        if not self.sftp_client:
+            self.connect()
+        self.sftp_client.get(remotepath=remote_file_path,localpath=local_file_path)
+    def tranfer_file_to_remote(self,local_file_path:str,remote_file_path:str):
+        """Help to transfer the file to remote"""
+        if not self.sftp_client:
+            self.connect()
+        self.sftp_client.put(localpath=local_file_path,remotepath=remote_file_path)
+    def write_remote_file(self,filepath:str,file_content:str):
+        """Write Remote file directly"""
+        if not self.sftp_client:
+            self.connect()
+        with self.sftp_client.file(filepath,'w') as file:
+            file.write(file_content)
